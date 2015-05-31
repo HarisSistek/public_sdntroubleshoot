@@ -1,0 +1,33 @@
+# Time Rule Dictionary:
+
+## Key values:
+'rule_type': 'Time',
+'start_time': '10:00'
+'end_time': '23:00'}
+'prot': 'TCP/UDP/ICMP'
+'from': 'h1'
+'to': 'h2'		# OPTIONAL #
+'dport': '22'		# OPTIONAL #
+'sport': '*'		# OPTIONAL # 
+
+# Date Rule Dictionary:
+
+## Key values:
+'rule_type': 'Date' 
+'prot': 'TCP/UDP/ICMP' 
+'from': 'h1' 
+'to': 'h2'		# OPTIONAL #
+'end_date': 'FRI'
+'start_date': 'MON'
+'dport': '22'		# OPTIONAL #
+'sport': '*'		# OPTIONAL # 
+
+# Vlan Rule Dictionary:
+
+## Key Values:
+'rule_type': 'VLAN'
+'prot': 'VLAN'
+'hosts': 'Vlan 20 has h1, h3, h4, h2'
+'vlan_id': '20'
+
+# All catched packets have:

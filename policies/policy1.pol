@@ -1,0 +1,45 @@
+# Hosts
+h1 = 10.0.1.100
+h2 = 10.0.1.101
+h3 = 10.0.1.102
+h4 = 10.0.1.103
+h5 = 10.0.1.104
+h6 = 10.0.1.105
+h7 = 10.0.1.106
+host1 = 10.0.0.1
+host2 = 10.0.0.2
+
+# Time blocks/allows
+#Time 10:00 to 23:00 block host1 to host2 prot TCP sport 4000 dport 5001
+#Time 10:00 to 23:00 block host1
+#Time 10:00 to 23:00 block host1 to host2 prot TCP
+#Time 10:00 to 23:00 block h2 prot TCP
+#Time 10:00 to 23:00 block h3 to 10.0.0.3
+#Time 10:00 to 23:00 block h4 to h3
+#Time 20:00 to 23:00 block h5
+
+Time 10:00 to 23:00 block host1 to host2 prot TCP sport 41238 dport 5001
+#Time 10:00 to 23:00 block host2 to host1 prot TCP sport 5001 dport 41238
+#Time 10:00 to 23:00 block h6 to 10.0.0.6 prot UDP sport 1000 dport 22
+#Time 10:00 to 23:00 block 10.0.0.6 to h6 prot UDP sport 22 dport 1000
+#Time 10:00 to 23:00 block h7 prot TCP
+#Time 10:00 to 23:00 block h3 to 10.0.1.110
+#Time 12:00 to 12:30 block h3 prot TCP sport * dport 22
+#Time 10:00 to 23:00 block h1 prot TCP sport 1000 dport 22
+
+# Date blocks/allows
+#Date MON to SUN block host1 to host2
+#Date 23 DES block h1
+#Date MON to FRI block 10.0.1.100
+#Date MON to FRI block h2
+#Date MON to FRI block h3 to 10.0.0.3
+#Date MON to FRI block h4 to h3
+#Date WED to THU block h5
+
+# Data rule
+#Data 1 KB to host1
+Data 1000 b from host2
+#Data 10 KB to 10.0.0.100
+
+# Vlans
+#Vlan 10 has h1, h2

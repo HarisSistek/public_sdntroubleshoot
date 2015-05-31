@@ -1,0 +1,49 @@
+# Time Rule Dictionary:
+
+## Key values:
+'rule_type': 'Time',
+'start_time': '10:00'
+'end_time': '23:00'}
+'prot': 'TCP/UDP/ICMP'
+'from': 'h1'
+'to': 'h2'		# OPTIONAL #
+'dport': '22'		# OPTIONAL #
+'sport': '*'		# OPTIONAL # 
+
+# Date Rule Dictionary:
+
+## Key values:
+'rule_type': 'Date' 
+'prot': 'TCP/UDP/ICMP' 
+'from': 'h1' 
+'to': 'h2'		# OPTIONAL #
+'end_date': 'FRI'
+'start_date': 'MON'
+'dport': '22'		# OPTIONAL #
+'sport': '*'		# OPTIONAL # 
+
+# Vlan Rule Dictionary:
+
+## Key Values:
+'rule_type': 'VLAN'
+'prot': 'VLAN'
+'hosts': 'Vlan 20 has h1, h3, h4, h2'
+'vlan_id': '20'
+
+# Catched packets have:
+'ipsrc': '10.0.1.100'		# NOT ARP #
+'ipdst': '10.0.1.101' 		# NOT ARP #
+'pktsrc': '2a:a9:9a:ad:90:19'
+'pktdst': '26:be:49:55:aa:19' 
+
+## ICMP specific:
+'ping_type': '8:ECHO_REQUEST'
+
+## UDP and TCP specific:
+'dst_port': ' 5001'
+'src_port': '59941'
+
+## ARP specific:
+'hwdst': '00:00:00:00:00:00'
+'hwsrc': '2a:a9:9a:ad:90:19'
+
