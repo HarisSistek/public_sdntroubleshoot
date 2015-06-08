@@ -6,14 +6,13 @@ Each network policy rule is starts with a case sensitive primetive.
 <ol>
   <li>Time</li>
   <li>Date</li>
+  <li>Data</li>
   <li>Vlan</li>
 </ol>
 
 In addition some of the rules contain OPTIONS:
 <ol>
   <li> TCP/UDP = specify protocol </li>
-  <li> sip = source ip</li>
-  <li> dip = destination ip</li>
   <li> sport = source port</li>
   <li> dport = destination port</li>
 </ol>
@@ -43,6 +42,11 @@ Time 12:00 to 12:30 block h3 prot TCP sip * dport 22
 Date MON to FRI block h2 to h1
 
 Date 23 DES block h1
+
+### Data
+Data 1000 b from h1
+
+Data 10 MB to h2
 
 ### Vlans
 Vlan 10 has h1, h2
