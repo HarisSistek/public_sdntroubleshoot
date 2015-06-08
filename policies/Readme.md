@@ -36,12 +36,10 @@ Time 10:00 to 23:00 block 8.8.8.8
 
 Time 10:00 to 12:00 block h1 to h2
 
-Time 12:00 to 12:30 block h3 prot TCP sip * dport 22
+Time 12:00 to 12:30 block h3 prot TCP sport * dport 22
 
 ### Date blocks/allows
 Date MON to FRI block h2 to h1
-
-Date 23 DES block h1
 
 ### Data
 Data 1000 b from h1
